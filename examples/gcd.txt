@@ -1,0 +1,29 @@
+# Set initial values x=4 M(20), y=2 M(21)
+SETACC 4
+STORE 20
+SETACC 2
+STORE 21
+
+# Calculate gcd of x and y
+MOVE 20 22
+MOVE 21 23
+LOAD 22
+JUMP != 4
+MOVE 21 22
+JUMP = 4
+LOAD 23
+JUMP = 11
+MOVE 22 24
+SUB 24 23
+LOAD 24
+JUMP <= 3
+MOVE 24 22
+JUMP 4
+MOVE 23 25
+SUB 25 22
+MOVE 25 23
+JUMP -11
+
+# Print the result stored in M(22)
+LOAD 22
+PRINT
