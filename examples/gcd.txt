@@ -1,7 +1,7 @@
 # Set initial values x=4 M(20), y=2 M(21)
-SETACC 4
+SETACC 12
 STORE 20
-SETACC 2
+SETACC 8
 STORE 21
 
 # Calculate gcd of x and y
