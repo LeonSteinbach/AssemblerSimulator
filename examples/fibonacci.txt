@@ -1,0 +1,30 @@
+# Set initial two values 0, 1 in M(2), M(3)
+SETACC 0
+STORE 2
+SETACC 1
+STORE 3
+
+# Set loop step amount M(1)
+SETACC 1
+STORE 1
+
+# Set number of terms n=10 M(0)
+SETACC 10
+STORE 0
+
+# Calculate n fibonacci numbers
+SUB 0 1
+LOAD 0
+JUMP = 9
+LOAD 3
+STORE 4
+ADD 4 2
+LOAD 3
+STORE 2
+LOAD 4
+STORE 3
+JUMP -10
+
+# Print n'th fibonacci number
+LOAD 3
+PRINT

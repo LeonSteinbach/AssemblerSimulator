@@ -1,4 +1,4 @@
-# Set initial values x=4 M(20), y=2 M(21)
+# Set initial values x=12 M(20), y=8 M(21)
 SETACC 12
 STORE 20
 SETACC 8
