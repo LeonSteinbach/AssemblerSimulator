@@ -1,0 +1,28 @@
+# Set starting number to 1 M(0)
+SETACC 1
+STORE 0
+
+# Set sum to 0 M(1)
+SETACC 0
+STORE 1
+
+# Set number of terms n=100 M(2)
+SETACC 10
+STORE 2
+
+# Set loop step amount M(3)
+SETACC 1
+STORE 3
+
+# Calculate gaussian sum (0+1+2+3+...+n)
+ADD 2 3
+SUB 2 3
+LOAD 2
+JUMP = 4
+ADD 1 0
+ADD 0 3
+JUMP -5
+
+# Print gaussian sum
+LOAD 1
+PRINT
